@@ -701,3 +701,15 @@ $$
 
 #### (2) Case 2: The firm with growth opportunities
 
+## Lecture 10: Capital Structure I
+
+date: 2024/11/11
+
+The capital structure decision is about how much to be financed by debt and how much to be financed by equity.
+
+### 1. The Pie Theory
+
+**The value of the firm** is the sum of the value of the debt ($B$) and the value of the equity ($S$).
+$$
+V = B + S
+$$
