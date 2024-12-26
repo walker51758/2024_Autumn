@@ -713,3 +713,129 @@ The capital structure decision is about how much to be financed by debt and how 
 $$
 V = B + S
 $$
+
+## Lecture 12: Valuation and Capital Budgeting
+
+The goal of this chapter is to value a project, or the firm itself, when leverage is employed.
+
+### 1. Adjusted-Present-Value Approach
+
+$$
+APV = NPV + NPVF \tag{1}
+$$
+
+$APV$: the value of a project to a levered firm
+
+$NPV$: value of the project to an unlevered firm
+
+$NPVF$: the net present value of the financing side effects.
+
+We consider the following side effects:
+
+1. the tax subsidy to debt
+2. the costs of issuing new securities
+3. the costs of financial distress (财务困境)
+4. some other subsidies to debt financing
+
+So, the formula 1 can be written as
+$$
+APV = -\text{Initial investment} + \sum^{\infin}_{t = 1} \frac{UCF_t}{(1+r_0)^t} + \text{Additional effects of debt} \tag{2}
+$$
+
+### 2. Flow-to-Equity Approach (权益现金流量法)
+
+It means that we discount the cash flow from the project to the equity holders of the leverd firm at the cost of equity capital $r_s$. **LCF**, which stands for levered cash flow, is the residual to equityholders after interest has been deducted.
+$$
+NPV = \sum^{\infin}_{t=1} \frac{LCF_t}{(1+r_s)^t} - (\text{Initial investment} - \text{Amount borrowed}) \tag{3}
+$$
+*这个方法只关注流向股东的钱，括号中的内容可以认为是股东们的initial investment。*
+
+
+
+<img src="image/14.png" style="zoom:50%;" />
+$$
+\begin{align}
+LCF &= \text{Cash inflows} - \text{Cash costs} - \text{Interest} - \text{Corporate tax}\\ &= \text{Income after interest} - \text{Corporate tax}\\ &= \text{Income after interest} \times (1 - T_c)
+\end{align} \tag{4}
+$$
+We can also calculate levered cash flow directly from unleverd cash flow. The difference between them is the **after tax interest payment**.
+$$
+UCF - LCF = (1-T_c)r_BB \tag{5}
+$$
+We can calculate $r_s$ by MM propositon II, $r_s = r_0 + \frac{B}{S} \times (1-T_c) \times (r_0 - r_B)$
+
+The result of this method should be **identical with** the result of APV approach.
+
+### 3. Weighted Average Cost of Capital Method (加权平均资本成本法)
+
+In this method, we discount the unlevered cash flow of the project at the weighted average cost of capital $r_{wacc}$.
+$$
+NPV = \sum^{\infin}_{t = 1} \frac{UCF_t}{(1+r_{wacc})^t} - \text{Initial investment} \tag{6}
+$$
+$$r_{wacc} = \frac{S}{B+S}r_s+\frac{B}{B+S}r_B(1-T_c)$$
+
+The result of this method should also be **identical with** the result of APV approach.
+
+### 4. Examples of APV
+
+*除了有一定难度和代表性的例题，其他的题目仅选取一些重要知识点。*
+
+- “The cash revenues <u>less cash expenses</u> (*不包括成本*) per year are $3,500,000.”
+
+- **Flotation costs** are fees paid when stock or debt is issued. These fees may go to printer, lawyers and investment banker, among others.
+
+  "Bicksler Enterprises can obtain a five years loan for $7,500,000 after flotation costs""Bicksler enterprises is informed that flotation costs will be 1 percent of the gross proceeds of its loan."
+
+  $$\text{Gross Proceeds}=\$7,500,000 \div 0.99 = \$7,575,758$$
+
+  $$\text{Flotation Costs}=\$7,575,758\times1\%=\$75,758$$
+
+  The flotation costs are **paid immediately** but are **deducted from  taxes by amortizing** on a straight line basis over the life of the loan.
+
+  $$NPV(\text{Flotation Costs})=-75,758+0.34\times\frac{75,758}{5}\times A_{0.1}^5=-56,228$$
+
+  *类似于税盾*
+
+  Interest must be paid **on the gross proceeds of the loan**, even  though intermediaries receive the flotation costs.
+
+- **nonamoritzing**: the loan will be paid at the end. Or one ballon payment.
+
+  $$NPV(\text{loan})=7,575,758-500,000\times A_{0.1}^5-\frac{7,575,578}{1.1^5}=976,415$$
+
+  *500,000是利息，债的成本（the cost of debt）用risk free return，即0.1。*
+
+#### Example 3:
+
+The initial investment in paving equipment is ==$20 million==. The  equipment will be fully depreciated using the straight-line method over its economic life of ==five years==. Earnings before interest, taxes, and depreciation collected from  the toll road are projected to be ==$3 million== per annum for ==20 years== starting from the end of the first year. The corporate tax rate is ==25 percent==. The required rate of return  for the project under all-equity financing is ==12 percent==. The  pre-tax cost of debt for the joint partnership is ==9 percent== per annum. The U.S. government will subsidize the project with a ==$10 million==, ==15-year== loan at an interest rate of ==5 percent== per year.  All principal will be repaid in one balloon payment at the end  of ==year 15==. What is the APV of this project?
+
+$$\text{Tax Shield}=(20m\div 5)\times 25\%=1m$$
+
+$$NPV = -20m + 3m(1-25\%)A_{0.12}^{20}+1mA_{0.12}^{20}$$
+
+$$NPVF = 10m - 10m\times(1-25\%)\times5\%\times A_{0.09}^{15}-\frac{10m}{1.09^{15}}$$
+
+### 5. How to choose methods
+
+Use WACC or FTE if the firm's target debt to value ratio applies to the project over its life.
+
+Use APV if the project's level of debt is known over the life of the project.
+
+### 6. Capital Budgeting When the Discount Rate Must Be Estimated
+
+*这里的discount rate指的就是$r_s$。下面是可能用到的两个公式：*
+$$
+r_s = r_f + \beta \times (R_m-r_f) \tag{7}
+$$
+
+$$
+r_s = r_0 + \frac{B}{S}\times(1-T_c)\times(r_0-r_B) \tag{8}
+$$
+
+*$\beta$由于各公司的debt to value ratio等因素不同，也有所不同，是各个公司独有的。$r_0$是作为all equity公司的cost of equity是行业内公司共享的。*
+
+*两家公司中，如果某一家公司的信息包含了$\beta$，可以先用式7求出该公司的$r_s$，然后用式8反求出$r_0$，最后由于$r_0$是共用的，又可以由式8求出另一家公司的$r_s$。*
+
+### 7. Beta and Leverage
+
+
+
